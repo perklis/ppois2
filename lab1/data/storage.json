@@ -1,0 +1,62 @@
+{
+  "dostoprimechatelnosti": [
+    {
+      "id": "d1",
+      "name": "Площадь Победы",
+      "description": "Известная городская площадь и мемориальный комплекс.",
+      "cell_id": "B2",
+      "tags": [
+        "история",
+        "прогулка"
+      ],
+      "photo_ids": [
+        "p1"
+      ]
+    },
+    {
+      "id": "d2",
+      "name": "Троицкое предместье",
+      "description": "Исторический район для прогулок и фотографий.",
+      "cell_id": "C3",
+      "tags": [
+        "архитектура",
+        "прогулка"
+      ],
+      "photo_ids": [
+        "p2"
+      ]
+    },
+    {
+      "id": "d3",
+      "name": "Привокзальная площадь",
+      "description": "ВИзитная карточка Минска",
+      "cell_id": "D4",
+      "tags": [
+        "архитектура",
+        "здания"
+      ],
+      "photo_ids": [
+        "p3"
+      ]
+    }
+  ],
+  "marshruty": [],
+  "fotografii": [
+    {
+      "id": "p1",
+      "title": "Вид на площадь",
+      "file_path": "photos/pobedy.jpg"
+    },
+    {
+      "id": "p2",
+      "title": "Улицы предместья",
+      "file_path": "photos/trinity.jpg"
+    },
+    {
+      "id": "p3",
+      "title": "Вокзал",
+      "file_path": "photos/station.jpg"
+    }
+  ],
+  "otzyvy": []
+}
