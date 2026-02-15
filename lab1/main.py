@@ -1,6 +1,6 @@
 from menu import Menu
 from domain.map_view import MapView
-from models.guide import Guide
+from domain.guide import Guide
 from persistence.json_storage import JsonStorage
 from services.id_generator import IdGenerator
 

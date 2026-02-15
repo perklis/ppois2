@@ -1,6 +1,6 @@
 from domain.entity_id import EntityId
 from exceptions import AppError
-from models.guide import Guide
+from domain.guide import Guide
 
 
 class Menu:
@@ -8,63 +8,59 @@ class Menu:
         self._guide = guide
 
     def run(self) -> None:
-        while True:
-            print("\nМеню")
-            print("1 Показать карту")
-            print("2 Выбрать достопримечательность на карте")
-            print("3 Узнать о достопримечательности")
-            print("4 Просмотреть фото достопримечательности")
-            print("5 Опубликовать отзыв")
-            print("6 Создать черновик маршрута")
-            print("7 Добавить достопримечательность в маршрут-черновик")
-            print("8 Удалить достопримечательность из маршрута-черновик")
-            print("9 Опубликовать маршрут")
-            print("10 Снять маршрут с публикации)")
-            print("11 Архивировать маршрут")
-            print("12 Список достопримечательностей")
-            print("13 Список маршрутов")
-            print("14 Отзывы по достопримечательности")
-            print("0 Выход")
+        actions = {
+            "1": self._show_map,
+            "2": self._select_on_map,
+            "3": self._show_attraction_info,
+            "4": self._show_photos,
+            "5": self._publish_review,
+            "6": self._create_route,
+            "7": self._add_stop,
+            "8": self._remove_stop,
+            "9": self._publish_route,
+            "10": self._unpublish_route,
+            "11": self._archive_route,
+            "12": self._list_attractions,
+            "13": self._list_routes,
+            "14": self._list_reviews,
+        }
 
+        while True:
+            self._print_menu()
             choice = input("Ваш выбор: ").strip()
+
+            if choice == "0":
+                print("До свидания!")
+                return
+
             try:
-                if choice == "1":
-                    self._show_map()
-                elif choice == "2":
-                    self._select_on_map()
-                elif choice == "3":
-                    self._show_attraction_info()
-                elif choice == "4":
-                    self._show_photos()
-                elif choice == "5":
-                    self._publish_review()
-                elif choice == "6":
-                    self._create_route()
-                elif choice == "7":
-                    self._add_stop()
-                elif choice == "8":
-                    self._remove_stop()
-                elif choice == "9":
-                    self._publish_route()
-                elif choice == "10":
-                    self._unpublish_route()
-                elif choice == "11":
-                    self._archive_route()
-                elif choice == "12":
-                    self._list_attractions()
-                elif choice == "13":
-                    self._list_routes()
-                elif choice == "14":
-                    self._list_reviews()
-                elif choice == "0":
-                    print("До свидания!")
-                    return
-                else:
-                    print("Попробуйте снова: ")
+                action = actions.get(choice)
+                if action is None:
+                    print("Попробуйте снова.")
+                    continue
+                action()
             except AppError as exc:
                 print(f"Ошибка: {exc}")
             except ValueError:
                 print("Некорректный формат числа")
+
+    def _print_menu(self) -> None:
+        print("\nМеню")
+        print("1. Показать карту")
+        print("2. Выбрать достопримечательность на карте (по клетке)")
+        print("3. Узнать о достопримечательности")
+        print("4. Просмотреть фото достопримечательности")
+        print("5. Опубликовать отзыв")
+        print("6. Создать черновик маршрута")
+        print("7. Добавить достопримечательность в маршрут-черновик")
+        print("8. Удалить достопримечательность из маршрута-черновик")
+        print("9. Опубликовать маршрут")
+        print("10. Снять маршрут с публикации")
+        print("11. Архивировать маршрут")
+        print("12. Список достопримечательностей")
+        print("13. Список маршрутов")
+        print("14. Отзывы по достопримечательности")
+        print("0. Выход")
 
     def _show_map(self) -> None:
         print(self._guide.map_text())
@@ -144,7 +140,9 @@ class Menu:
             return
         print("Маршруты:")
         for r in items:
-            print(f"- {r.id.value}: {r.name}, статус: {r.status.value}, точек: {len(r.attraction_ids)}")
+            print(
+                f"- {r.id.value}: {r.name}, статус: {r.status.value}, точек: {len(r.attraction_ids)}"
+            )
 
     def _list_reviews(self) -> None:
         attraction_id = EntityId(input("Введите id достопримечательности: ").strip())

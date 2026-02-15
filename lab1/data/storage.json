@@ -40,7 +40,17 @@
       ]
     }
   ],
-  "marshruty": [],
+  "marshruty": [
+    {
+      "id": "route20260215",
+      "name": "d1d3",
+      "status": "архив",
+      "attraction_ids": [
+        "d1",
+        "d3"
+      ]
+    }
+  ],
   "fotografii": [
     {
       "id": "p1",
@@ -58,5 +68,30 @@
       "file_path": "photos/station.jpg"
     }
   ],
-  "otzyvy": []
+  "otzyvy": [
+    {
+      "id": "review20260215",
+      "attraction_id": "d3",
+      "author": "ann",
+      "rating": 5,
+      "text": "good",
+      "created_at_iso": "2026-02-15T15:18:52"
+    },
+    {
+      "id": "review20260215_2",
+      "attraction_id": "d2",
+      "author": "pes",
+      "rating": 3,
+      "text": "not bad",
+      "created_at_iso": "2026-02-15T15:19:09"
+    },
+    {
+      "id": "review20260215_3",
+      "attraction_id": "d3",
+      "author": "ivan",
+      "rating": 4,
+      "text": "ok",
+      "created_at_iso": "2026-02-15T15:19:33"
+    }
+  ]
 }
