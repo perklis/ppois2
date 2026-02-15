@@ -82,7 +82,7 @@ class Menu:
             return
         print("Фотографии:")
         for p in photos:
-            print(f"- {p.title} (файл: {p.file_path})")
+            print(f"- {p.title}. файл: {p.file_path} <- нажмите ctrl+сюда для просмотра фото")
 
     def _publish_review(self) -> None:
         attraction_id = EntityId(input("Введите id достопримечательности: ").strip())
