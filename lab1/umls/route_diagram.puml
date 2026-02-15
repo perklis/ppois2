@@ -1,0 +1,30 @@
+@startuml route_state_machine_strict
+title Route 
+
+' Состояния
+state DRAFT
+state PUBLISHED
+state ARCHIVED
+state "OperationError" as ERROR <<error>>
+
+[*] --> DRAFT
+
+' --- publish() ---
+DRAFT --> PUBLISHED : publish() [attraction_ids.size > 0]
+DRAFT --> ERROR     : publish() [attraction_ids.size == 0]\n/ raise OperationError
+
+PUBLISHED --> PUBLISHED : publish()\n/ return (no-op)
+
+ARCHIVED --> ERROR : publish()\n/ raise OperationError
+
+' --- archive() (в коде идемпотентен) ---
+DRAFT --> ARCHIVED      : archive()
+PUBLISHED --> ARCHIVED  : archive()
+ARCHIVED --> ARCHIVED   : archive()\n/ return (no-op)
+
+' --- unpublish_to_draft() ---
+PUBLISHED --> DRAFT : unpublish_to_draft()
+DRAFT --> ERROR     : unpublish_to_draft()\n/ raise OperationError
+ARCHIVED --> ERROR  : unpublish_to_draft()\n/ raise OperationError
+
+@enduml

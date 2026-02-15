@@ -1,0 +1,144 @@
+@startuml classes_lab1
+set namespaceSeparator none
+
+skinparam classAttributeIconSize 0
+
+' ======= CLASSES =======
+
+class "EntityId" as lab1.domain.entity_id.EntityId {
+  -_value : str
+  +value : str
+  +__str__() : str
+  +__repr__() : str
+  +__eq__(other: object) : bool
+  +__hash__() : int
+}
+
+class "Photo" as lab1.domain.photo.Photo {
+  +id : EntityId
+  +title : str
+  +file_path : str
+}
+
+class "Attraction" as lab1.domain.attraction.Attraction {
+  +id : EntityId
+  +name : str
+  +description : str
+  +cell_id : str
+  +tags : List<str>
+  +photo_ids : List<EntityId>
+  +add_photo(photo: Photo) : None
+  -_validate_cell_id(value: str) : str
+}
+
+class "Review" as lab1.domain.review.Review {
+  +id : EntityId
+  +attraction_id : EntityId
+  +author : str
+  +rating : int
+  +text : str
+  +created_at_iso : str
+}
+
+enum "RouteStatus" as lab1.domain.route_status.RouteStatus {
+  DRAFT = "черновик"
+  PUBLISHED = "опубликован"
+  ARCHIVED = "архив"
+}
+
+class "Route" as lab1.domain.route.Route {
+  +id : EntityId
+  +name : str
+  +status : RouteStatus
+  +attraction_ids : List<EntityId>
+  +add_stop(attraction_id: EntityId) : None
+  +remove_stop(attraction_id: EntityId) : None
+  +publish() : None
+  +archive() : None
+  +unpublish_to_draft() : None
+}
+
+class "MapView" as lab1.domain.map_view.MapView {
+  +rows : List<str>
+  +cols : int
+  -_cell_w : int
+  +render(occupied_cells: Dict<str, str>) : str
+  +normalize_cell_id(cell_id: str) : str
+}
+
+class "IdGenerator" as lab1.services.id_generator.IdGenerator {
+  +new_id(prefix: str) : str
+}
+
+class "JsonStorage" as lab1.persistence.json_storage.JsonStorage {
+  -_file_path : str
+  +load() : dict
+  +save(data: dict) : None
+}
+
+' --- Guide (версия для лабы) ---
+
+class "Guide" as lab1.domain.guide.Guide {
+  -_map_view : MapView
+  -_ids : IdGenerator
+  -_attractions : Dict<str, Attraction>
+  -_routes : Dict<str, Route>
+  -_photos : Dict<str, Photo>
+  -_reviews : Dict<str, Review>
+
+  +map_text() : str
+  +select_attraction_on_map(cell_id: str) : EntityId
+
+  +list_attractions() : List<Attraction>
+  +get_attraction(attraction_id: EntityId) : Attraction
+  +attraction_info(attraction_id: EntityId) : str
+
+  +create_route(name: str) : EntityId
+  +add_stop_to_route(route_id: EntityId, attraction_id: EntityId) : None
+  +publish_route(route_id: EntityId) : None
+  +archive_route(route_id: EntityId) : None
+
+  +publish_review(attraction_id: EntityId, author: str, rating: int, text: str) : EntityId
+  +list_reviews_for_attraction(attraction_id: EntityId) : List<Review>
+
+  +export_state() : dict
+  +import_state(data: dict) : None
+
+  +seed_if_empty() : None
+
+  -_ensure_unique_id(base_id: str, storage: Dict<str, object>) : str
+}
+
+' Связи/кратности (по факту хранения в полях)
+lab1.domain.guide.Guide "1" --> "1" lab1.domain.map_view.MapView : _map_view
+lab1.domain.guide.Guide "1" --> "1" lab1.services.id_generator.IdGenerator : _ids
+
+' Guide держит коллекции в словарях: 0..* объектов каждого типа
+lab1.domain.guide.Guide "1" *-- "0..*" lab1.domain.attraction.Attraction : _attractions
+lab1.domain.guide.Guide "1" *-- "0..*" lab1.domain.route.Route : _routes
+lab1.domain.guide.Guide "1" *-- "0..*" lab1.domain.photo.Photo : _photos
+lab1.domain.guide.Guide "1" *-- "0..*" lab1.domain.review.Review : _reviews
+' Route has a status
+lab1.domain.route.Route "1" --> "1" lab1.domain.route_status.RouteStatus : status
+
+' Value-object usage
+lab1.domain.attraction.Attraction "1" --> "1" lab1.domain.entity_id.EntityId : id
+lab1.domain.photo.Photo "1" --> "1" lab1.domain.entity_id.EntityId : id
+lab1.domain.route.Route "1" --> "1" lab1.domain.entity_id.EntityId : id
+lab1.domain.review.Review "1" --> "1" lab1.domain.entity_id.EntityId : id
+
+' Review refers to Attraction by id
+lab1.domain.review.Review "0..*" --> "1" lab1.domain.entity_id.EntityId : attraction_id
+
+' Attraction keeps photo ids (not Photo objects)
+lab1.domain.attraction.Attraction "1" --> "0..*" lab1.domain.entity_id.EntityId : photo_ids
+
+' Route keeps attraction ids (not Attraction objects)
+lab1.domain.route.Route "1" --> "0..*" lab1.domain.entity_id.EntityId : attraction_ids
+
+' Dependencies via method parameters (dotted)
+lab1.domain.attraction.Attraction ..> lab1.domain.photo.Photo : add_photo(photo)
+lab1.domain.guide.Guide ..> lab1.domain.entity_id.EntityId : attraction_id
+
+
+@enduml
