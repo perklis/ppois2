@@ -74,7 +74,7 @@ class Guide:
         return route
 
     def create_route(self, name: str) -> EntityId:
-        base_id = self._ids.new_id("route")  #routeYYYYMMDD
+        base_id = self._ids.new_id("route")
         route_id_text = self._ensure_unique_id(base_id, self._routes)
         route_id = EntityId(route_id_text)
 
@@ -112,18 +112,18 @@ class Guide:
     def publish_review(self, attraction_id: EntityId, author: str, rating: int, text: str) -> EntityId:
         self.get_attraction(attraction_id)
 
-        base_id = self._ids.new_id("review")  #reviewYYYYMMDD
+        base_id = self._ids.new_id("review") 
         review_id_text = self._ensure_unique_id(base_id, self._reviews)
         review_id = EntityId(review_id_text)
 
-        created_at_iso = strftime("%Y-%m-%dT%H:%M:%S")
+        created_at = strftime("%Y-%m-%dT%H:%M:%S")
         review = Review(
             review_id=review_id,
             attraction_id=attraction_id,
             author=author,
             rating=rating,
             text=text,
-            created_at_iso=created_at_iso,
+            created_at_iso=created_at,
         )
         self._reviews[review.id.value] = review
         return review.id
@@ -258,7 +258,7 @@ class Guide:
         for s in RouteStatus:
             if s.value == value:
                 return s
-        raise ValidationError("Некорректный статус маршрута в файле хранения.")
+        raise ValidationError("Некорректный статус маршрута в файле хранения")
 
     def _review_to_dict(self, review: Review) -> dict:
         return {

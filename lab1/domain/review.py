@@ -17,7 +17,11 @@ class Review:
 
         self.author = author.strip() or "Аноним"
 
-        self.rating = int(rating)
+        try:
+            self.rating = int(rating)
+        except (TypeError, ValueError):
+            raise ValidationError("Оценка должна быть целым числом от 1 до 5")
+
         if self.rating < 1 or self.rating > 5:
             raise ValidationError("Оценка должна быть от 1 до 5")
 
