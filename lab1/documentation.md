@@ -202,3 +202,46 @@
 
 ## Метод `new_id(prefix: str) -> str`
 Берёт очищенный префикс.Если он пустой, использует значение по умолчанию `"id"`. Возвращает строку: `"{clean_prefix}{YYYYMMDD}"`, где дата — сегодняшняя в формате `YYYYMMDD`.
+## Работа с программой
+На вход - консольное меню.
+![alt text](report_images/image.png)
+1. - показ карты.
+![alt text](report_images/image-1.png)
+2. - выбор достопримечательности, показ ее айди. Пользователь вводит клетку. Если неправильно, то программа выдает ошибку.
+![alt text](report_images/image-2.png)
+или
+![alt text](report_images/image-3.png)
+3. - показ информации о достопримечательности
+![alt text](report_images/image-4.png)
+или
+![alt text](report_images/image-5.png)
+4. - просмотр фото
+![alt text](report_images/image-6.png)
+или
+![alt text](report_images/image-7.png)
+5. - публикация отзыва
+![alt text](report_images/image-8.png)
+6. - создать черновик маршрута
+![alt text](report_images/image-9.png)
+7. - добавить остановку
+![alt text](report_images/image-10.png)
+8. - удаление остановки
+![alt text](report_images/image-11.png)
+9. - публикация маршрута
+![alt text](report_images/image-12.png)
+или
+![alt text](report_images/image-13.png)
+или
+![alt text](report_images/image-14.png)
+10. - маршрут из публикации в черновик
+![alt text](report_images/image-15.png)
+11. - архивировать маршрут
+![alt text](report_images/image-16.png)
+12. - список достопримечательностей
+![alt text](report_images/image-17.png)
+13. - список маршрутов
+![alt text](report_images/image-18.png)
+14. - отзывы на достопримечательность
+![alt text](report_images/image-19.png)
+0. - выход
+![alt text](report_images/image-20.png)

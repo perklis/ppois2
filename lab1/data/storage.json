@@ -49,6 +49,34 @@
         "d1",
         "d3"
       ]
+    },
+    {
+      "id": "route20260217",
+      "name": "asd",
+      "status": "архив",
+      "attraction_ids": [
+        "d3"
+      ]
+    },
+    {
+      "id": "route20260217_2",
+      "name": "asd2",
+      "status": "черновик",
+      "attraction_ids": []
+    },
+    {
+      "id": "route20260217_3",
+      "name": "minsk",
+      "status": "черновик",
+      "attraction_ids": []
+    },
+    {
+      "id": "route20260217_4",
+      "name": "montag",
+      "status": "архив",
+      "attraction_ids": [
+        "d3"
+      ]
     }
   ],
   "fotografii": [
@@ -92,6 +120,14 @@
       "rating": 4,
       "text": "ok",
       "created_at_iso": "2026-02-15T15:19:33"
+    },
+    {
+      "id": "review20260217",
+      "attraction_id": "d3",
+      "author": "anna",
+      "rating": 4,
+      "text": "baranovichy",
+      "created_at_iso": "2026-02-17T11:08:14"
     }
   ]
 }
