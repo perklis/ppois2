@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vet_records>
+  <record>
+    <pet_name>Оксана</pet_name>
+    <birth_date>2020-01-17</birth_date>
+    <last_visit_date>2023-03-26</last_visit_date>
+    <vet_name>Петров И И</vet_name>
+    <diagnosis>отит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Алеся</pet_name>
+    <birth_date>2013-01-27</birth_date>
+    <last_visit_date>2025-09-17</last_visit_date>
+    <vet_name>Петров И И</vet_name>
+    <diagnosis>ларингит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Пушок</pet_name>
+    <birth_date>2000-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Петров И И</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Снежок</pet_name>
+    <birth_date>2023-04-13</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Петров И И</vet_name>
+    <diagnosis>инфекция</diagnosis>
+  </record>
+  <record>
+    <pet_name>Пушинка</pet_name>
+    <birth_date>2012-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Петров И И</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Машина</pet_name>
+    <birth_date>2019-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Петров И И</vet_name>
+    <diagnosis>перелом лапы</diagnosis>
+  </record>
+  <record>
+    <pet_name>Окунь</pet_name>
+    <birth_date>2019-04-21</birth_date>
+    <last_visit_date>2025-08-12</last_visit_date>
+    <vet_name>Петров И И</vet_name>
+    <diagnosis>простуда</diagnosis>
+  </record>
+  <record>
+    <pet_name>Куки</pet_name>
+    <birth_date>2022-04-22</birth_date>
+    <last_visit_date>2025-11-20</last_visit_date>
+    <vet_name>Петров И И</vet_name>
+    <diagnosis>здоров
+</diagnosis>
+  </record>
+  <record>
+    <pet_name>Маня</pet_name>
+    <birth_date>2000-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Петров И И</vet_name>
+    <diagnosis>конъюктивит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Стас</pet_name>
+    <birth_date>2023-05-05</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Андреев В С</vet_name>
+    <diagnosis>слепота</diagnosis>
+  </record>
+  <record>
+    <pet_name>Семен</pet_name>
+    <birth_date>2019-01-17</birth_date>
+    <last_visit_date>2025-11-27</last_visit_date>
+    <vet_name>Андреев В С</vet_name>
+    <diagnosis>насморк</diagnosis>
+  </record>
+  <record>
+    <pet_name>Пес</pet_name>
+    <birth_date>2010-03-25</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Андреев В С</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Кот</pet_name>
+    <birth_date>2017-12-22</birth_date>
+    <last_visit_date>2025-12-18</last_visit_date>
+    <vet_name>Андреев В С</vet_name>
+    <diagnosis>отит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Иван</pet_name>
+    <birth_date>2019-01-27</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Андреев В С</vet_name>
+    <diagnosis>перелом</diagnosis>
+  </record>
+  <record>
+    <pet_name>Яся</pet_name>
+    <birth_date>2023-04-16</birth_date>
+    <last_visit_date>2025-06-10</last_visit_date>
+    <vet_name>Андреев В С</vet_name>
+    <diagnosis>сердечная недостаточность</diagnosis>
+  </record>
+  <record>
+    <pet_name>Антон</pet_name>
+    <birth_date>2020-01-19</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Андреев В С</vet_name>
+    <diagnosis>усталость</diagnosis>
+  </record>
+  <record>
+    <pet_name>Вася</pet_name>
+    <birth_date>2019-05-25</birth_date>
+    <last_visit_date>2025-12-17</last_visit_date>
+    <vet_name>Андреев В С</vet_name>
+    <diagnosis>линька</diagnosis>
+  </record>
+  <record>
+    <pet_name>Игорек</pet_name>
+    <birth_date>2011-12-29</birth_date>
+    <last_visit_date>2024-10-24</last_visit_date>
+    <vet_name>Андреев В С</vet_name>
+    <diagnosis>усыпление</diagnosis>
+  </record>
+  <record>
+    <pet_name>Буся</pet_name>
+    <birth_date>2023-01-05</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Виктор П П</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Боня</pet_name>
+    <birth_date>2020-01-03</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Виктор П П</vet_name>
+    <diagnosis>вросший ноготь</diagnosis>
+  </record>
+  <record>
+    <pet_name>Кент</pet_name>
+    <birth_date>2023-03-10</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Виктор П П</vet_name>
+    <diagnosis>отит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Пумба</pet_name>
+    <birth_date>2022-12-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Виктор П П</vet_name>
+    <diagnosis>стоматит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Тимон</pet_name>
+    <birth_date>2020-07-17</birth_date>
+    <last_visit_date>2025-12-19</last_visit_date>
+    <vet_name>Виктор П П</vet_name>
+    <diagnosis>перелом</diagnosis>
+  </record>
+  <record>
+    <pet_name>Остис</pet_name>
+    <birth_date>2023-01-22</birth_date>
+    <last_visit_date>2026-01-16</last_visit_date>
+    <vet_name>Виктор П П</vet_name>
+    <diagnosis>усыпление</diagnosis>
+  </record>
+  <record>
+    <pet_name>Иитик</pet_name>
+    <birth_date>2000-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Голенков В В</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Кася</pet_name>
+    <birth_date>2023-02-18</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Виктор П П</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Аня</pet_name>
+    <birth_date>2000-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Виктор П П</vet_name>
+    <diagnosis>паразиты</diagnosis>
+  </record>
+  <record>
+    <pet_name>Фикус</pet_name>
+    <birth_date>2000-09-22</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Виктор П П</vet_name>
+    <diagnosis>стоматит</diagnosis>
+  </record>
+</vet_records>

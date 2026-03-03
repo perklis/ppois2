@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vet_records>
+  <record>
+    <pet_name>Укроп</pet_name>
+    <birth_date>2000-01-01</birth_date>
+    <last_visit_date>2026-03-02</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>Мочекаменная болезнь</diagnosis>
+  </record>
+  <record>
+    <pet_name>Еж</pet_name>
+    <birth_date>2020-10-02</birth_date>
+    <last_visit_date>2023-10-02</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Кулек</pet_name>
+    <birth_date>2007-05-10</birth_date>
+    <last_visit_date>2026-01-02</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>оглох</diagnosis>
+  </record>
+  <record>
+    <pet_name>Шарик</pet_name>
+    <birth_date>2017-09-15</birth_date>
+    <last_visit_date>2026-03-02</last_visit_date>
+    <vet_name>Иванов А. А.</vet_name>
+    <diagnosis>простуда</diagnosis>
+  </record>
+  <record>
+    <pet_name>Дима</pet_name>
+    <birth_date>2019-01-01</birth_date>
+    <last_visit_date>2026-03-02</last_visit_date>
+    <vet_name>Полещук О. В.</vet_name>
+    <diagnosis>ослеп</diagnosis>
+  </record>
+  <record>
+    <pet_name>Энюш</pet_name>
+    <birth_date>2020-10-01</birth_date>
+    <last_visit_date>2026-03-02</last_visit_date>
+    <vet_name>Ивашено В. П.</vet_name>
+    <diagnosis>онкология</diagnosis>
+  </record>
+  <record>
+    <pet_name>Арсений</pet_name>
+    <birth_date>2023-10-14</birth_date>
+    <last_visit_date>2024-02-02</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Собака</pet_name>
+    <birth_date>2000-01-22</birth_date>
+    <last_visit_date>2025-11-19</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>простуда</diagnosis>
+  </record>
+  <record>
+    <pet_name>Кошка</pet_name>
+    <birth_date>2019-06-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>рана лапы</diagnosis>
+  </record>
+  <record>
+    <pet_name>Будка</pet_name>
+    <birth_date>2000-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>профосмотр</diagnosis>
+  </record>
+  <record>
+    <pet_name>Ковш</pet_name>
+    <birth_date>2007-01-01</birth_date>
+    <last_visit_date>2026-02-11</last_visit_date>
+    <vet_name>Ивашенко В. П.</vet_name>
+    <diagnosis>слепота</diagnosis>
+  </record>
+  <record>
+    <pet_name>Иван</pet_name>
+    <birth_date>2024-01-01</birth_date>
+    <last_visit_date>2025-03-03</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>здоровый кот</diagnosis>
+  </record>
+  <record>
+    <pet_name>Барсик</pet_name>
+    <birth_date>2020-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Иванов Сергей Петрович</vet_name>
+    <diagnosis>гастрит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Рекс</pet_name>
+    <birth_date>2006-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>артрит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Белла</pet_name>
+    <birth_date>2023-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Попова М С</vet_name>
+    <diagnosis>ларингит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Лууна</pet_name>
+    <birth_date>2024-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>Вирусная инфекция</diagnosis>
+  </record>
+  <record>
+    <pet_name>Симба</pet_name>
+    <birth_date>2023-01-01</birth_date>
+    <last_visit_date>2024-03-03</last_visit_date>
+    <vet_name>Попова М С</vet_name>
+    <diagnosis>стоматит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Бим</pet_name>
+    <birth_date>2024-12-01</birth_date>
+    <last_visit_date>2025-12-03</last_visit_date>
+    <vet_name>Попова М С</vet_name>
+    <diagnosis>стоматит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Дина</pet_name>
+    <birth_date>2023-01-01</birth_date>
+    <last_visit_date>2026-02-12</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>мочекаменная болезнь</diagnosis>
+  </record>
+  <record>
+    <pet_name>Ника</pet_name>
+    <birth_date>2023-10-01</birth_date>
+    <last_visit_date>2024-03-03</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>бронхит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Аркаша</pet_name>
+    <birth_date>2017-01-01</birth_date>
+    <last_visit_date>2026-01-03</last_visit_date>
+    <vet_name>Ивашенко В П</vet_name>
+    <diagnosis>стоматит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Чарли</pet_name>
+    <birth_date>2025-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>бронхит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Том</pet_name>
+    <birth_date>2023-01-01</birth_date>
+    <last_visit_date>2024-03-13</last_visit_date>
+    <vet_name>Попова М С</vet_name>
+    <diagnosis>травма лапы</diagnosis>
+  </record>
+  <record>
+    <pet_name>Снежок</pet_name>
+    <birth_date>2019-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Ивашенко В. П.</vet_name>
+    <diagnosis>стоматит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Чаплин</pet_name>
+    <birth_date>2023-01-01</birth_date>
+    <last_visit_date>2024-03-03</last_visit_date>
+    <vet_name>Ивашенко В. П.</vet_name>
+    <diagnosis>стоматит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Ричи</pet_name>
+    <birth_date>2023-01-01</birth_date>
+    <last_visit_date>2024-03-03</last_visit_date>
+    <vet_name>Ивашенко В. П.</vet_name>
+    <diagnosis>аллергия</diagnosis>
+  </record>
+  <record>
+    <pet_name>Марс</pet_name>
+    <birth_date>2023-01-01</birth_date>
+    <last_visit_date>2024-03-03</last_visit_date>
+    <vet_name>Ивашенко В. П.</vet_name>
+    <diagnosis>дерматит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Веста</pet_name>
+    <birth_date>2023-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Попова М С</vet_name>
+    <diagnosis>отит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Бакс</pet_name>
+    <birth_date>2023-02-01</birth_date>
+    <last_visit_date>2023-12-03</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>паразиты</diagnosis>
+  </record>
+  <record>
+    <pet_name>Граф</pet_name>
+    <birth_date>2000-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Ивашенко В. П.</vet_name>
+    <diagnosis>гельминты</diagnosis>
+  </record>
+</vet_records>
