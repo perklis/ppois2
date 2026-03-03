@@ -54,8 +54,7 @@
     <birth_date>2022-04-22</birth_date>
     <last_visit_date>2025-11-20</last_visit_date>
     <vet_name>Петров И И</vet_name>
-    <diagnosis>здоров
-</diagnosis>
+    <diagnosis>здоров</diagnosis>
   </record>
   <record>
     <pet_name>Маня</pet_name>
@@ -196,5 +195,19 @@
     <last_visit_date>2026-03-03</last_visit_date>
     <vet_name>Виктор П П</vet_name>
     <diagnosis>стоматит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Витек</pet_name>
+    <birth_date>2017-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Селин</pet_name>
+    <birth_date>2012-01-01</birth_date>
+    <last_visit_date>2020-03-03</last_visit_date>
+    <vet_name>Полещук О В</vet_name>
+    <diagnosis>отит</diagnosis>
   </record>
 </vet_records>

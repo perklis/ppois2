@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vet_records>
+  <record>
+    <pet_name>Ася</pet_name>
+    <birth_date>2019-01-18</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Петров В А</vet_name>
+    <diagnosis>гастрит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Бублик</pet_name>
+    <birth_date>2000-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Петров В А</vet_name>
+    <diagnosis>отит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Дозор</pet_name>
+    <birth_date>2020-01-18</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Петров В А</vet_name>
+    <diagnosis>аллергия</diagnosis>
+  </record>
+  <record>
+    <pet_name>Зевс</pet_name>
+    <birth_date>2022-08-17</birth_date>
+    <last_visit_date>2025-08-20</last_visit_date>
+    <vet_name>Петров В А</vet_name>
+    <diagnosis>артрит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Жасмин</pet_name>
+    <birth_date>2024-04-18</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Петров В А</vet_name>
+    <diagnosis>дерматит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Лапа</pet_name>
+    <birth_date>2019-04-11</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Петров В А</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Модус</pet_name>
+    <birth_date>2023-07-13</birth_date>
+    <last_visit_date>2025-09-02</last_visit_date>
+    <vet_name>Петров В А</vet_name>
+    <diagnosis>паразиты</diagnosis>
+  </record>
+  <record>
+    <pet_name>Ерошка</pet_name>
+    <birth_date>2000-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Попова М С</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Ириска</pet_name>
+    <birth_date>2025-01-23</birth_date>
+    <last_visit_date>2026-01-13</last_visit_date>
+    <vet_name>Попова М С</vet_name>
+    <diagnosis>дерматит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Мартин</pet_name>
+    <birth_date>2020-01-18</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Попова М С</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Хам</pet_name>
+    <birth_date>2019-01-27</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Попова М С</vet_name>
+    <diagnosis>отит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Нюша</pet_name>
+    <birth_date>2017-01-14</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Попова М С</vet_name>
+    <diagnosis>отит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Оскар</pet_name>
+    <birth_date>2019-01-20</birth_date>
+    <last_visit_date>2025-12-03</last_visit_date>
+    <vet_name>Попова М С</vet_name>
+    <diagnosis>бронхит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Семен</pet_name>
+    <birth_date>2019-03-16</birth_date>
+    <last_visit_date>2025-11-26</last_visit_date>
+    <vet_name>Попова М С</vet_name>
+    <diagnosis>артрит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Тучка</pet_name>
+    <birth_date>2019-01-12</birth_date>
+    <last_visit_date>2024-03-22</last_visit_date>
+    <vet_name>Путин В В</vet_name>
+    <diagnosis>артрит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Феникс</pet_name>
+    <birth_date>2019-01-13</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Путин В В</vet_name>
+    <diagnosis>гастрит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Хлоя</pet_name>
+    <birth_date>2022-09-22</birth_date>
+    <last_visit_date>2025-07-23</last_visit_date>
+    <vet_name>Путин В В</vet_name>
+    <diagnosis>пародонтит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Шуня</pet_name>
+    <birth_date>2023-01-21</birth_date>
+    <last_visit_date>2026-01-15</last_visit_date>
+    <vet_name>Путин В В</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Бизнес</pet_name>
+    <birth_date>2019-01-26</birth_date>
+    <last_visit_date>2025-07-09</last_visit_date>
+    <vet_name>Путин В В</vet_name>
+    <diagnosis>профосмотр</diagnosis>
+  </record>
+  <record>
+    <pet_name>Бакс</pet_name>
+    <birth_date>2025-01-24</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Путин В В</vet_name>
+    <diagnosis>прививка</diagnosis>
+  </record>
+  <record>
+    <pet_name>Чара</pet_name>
+    <birth_date>2000-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Путин В В</vet_name>
+    <diagnosis>гастрит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Будка</pet_name>
+    <birth_date>2019-10-17</birth_date>
+    <last_visit_date>2025-11-25</last_visit_date>
+    <vet_name>Путин В В</vet_name>
+    <diagnosis>стоматит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Шерри</pet_name>
+    <birth_date>2000-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Остисов Б Н</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Яша</pet_name>
+    <birth_date>2018-11-18</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Остисов Б Н</vet_name>
+    <diagnosis>лишай</diagnosis>
+  </record>
+  <record>
+    <pet_name>Виши</pet_name>
+    <birth_date>2024-01-26</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Остисов Б Н</vet_name>
+    <diagnosis>бронхит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Глория</pet_name>
+    <birth_date>2020-10-23</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Остисов Б Н</vet_name>
+    <diagnosis>дерматит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Вилли</pet_name>
+    <birth_date>2000-01-01</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Остисов Б Н</vet_name>
+    <diagnosis>здоров</diagnosis>
+  </record>
+  <record>
+    <pet_name>Пупс</pet_name>
+    <birth_date>2023-01-20</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Остисов Б Н</vet_name>
+    <diagnosis>панкреатит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Цезарь</pet_name>
+    <birth_date>2022-01-15</birth_date>
+    <last_visit_date>2025-12-18</last_visit_date>
+    <vet_name>Остисов Б Н</vet_name>
+    <diagnosis>гастрит</diagnosis>
+  </record>
+  <record>
+    <pet_name>Умка</pet_name>
+    <birth_date>2020-04-16</birth_date>
+    <last_visit_date>2026-03-03</last_visit_date>
+    <vet_name>Остисов Б Н</vet_name>
+    <diagnosis>артрит</diagnosis>
+  </record>
+</vet_records>
