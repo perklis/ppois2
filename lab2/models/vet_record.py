@@ -31,10 +31,8 @@ class VetRecord:
 class QueryCriteria:
     pet_name: str | None = None
     birth_date: date | None = None
-
     last_visit_date: date | None = None
     vet_name: str | None = None
-
     diagnosis_phrase: str | None = None
 
     def normalized(self) -> "QueryCriteria":

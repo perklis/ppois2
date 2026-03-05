@@ -1,7 +1,5 @@
 from __future__ import annotations
-
 from PyQt6.QtCore import QModelIndex, QSortFilterProxyModel, Qt
-
 from models.vet_record import (
     PET_NAME_COL,
     BIRTH_DATE_COL,

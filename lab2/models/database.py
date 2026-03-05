@@ -1,10 +1,7 @@
 from __future__ import annotations
-
 from pathlib import Path
 from datetime import date
-
 from PyQt6.QtSql import QSqlDatabase, QSqlQuery
-
 from models.vet_record import VetRecord, QueryCriteria, build_where_clause
 
 
@@ -150,3 +147,5 @@ class DatabaseManager:
         query = QSqlQuery(self._db)
         if not query.exec(sql):
             raise RuntimeError(query.lastError().text())
+        
+        
