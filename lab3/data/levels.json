@@ -1,0 +1,28 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "name": "Оазис",
+      "target_score": 600,
+      "jewel_types": 4,
+      "difficulty": 1,
+      "blocked": []
+    },
+    {
+      "id": 2,
+      "name": "Храм",
+      "target_score": 1100,
+      "jewel_types": 4,
+      "difficulty": 2,
+      "blocked": [[3, 3], [3, 4], [4, 3], [4, 4]]
+    },
+    {
+      "id": 3,
+      "name": "Пирамида",
+      "target_score": 1600,
+      "jewel_types": 4,
+      "difficulty": 3,
+      "blocked": [[1, 3], [1, 4], [2, 3], [2, 4], [5, 3], [5, 4], [6, 3], [6, 4]]
+    }
+  ]
+}

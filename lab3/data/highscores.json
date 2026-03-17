@@ -1,0 +1,106 @@
+{
+  "time": [
+    {
+      "name": "Ыоляолывап",
+      "score": 15163,
+      "timestamp": "2026-03-18 00:43"
+    },
+    {
+      "name": "Aiko",
+      "score": 7975,
+      "timestamp": "2025-11-18 20:42"
+    },
+    {
+      "name": "Liam",
+      "score": 7617,
+      "timestamp": "2025-09-03 14:11"
+    },
+    {
+      "name": "Mira",
+      "score": 7135,
+      "timestamp": "2025-12-27 09:05"
+    },
+    {
+      "name": "Noah",
+      "score": 6841,
+      "timestamp": "2026-01-06 22:18"
+    },
+    {
+      "name": "Sana",
+      "score": 6592,
+      "timestamp": "2025-08-14 16:44"
+    },
+    {
+      "name": "Ilya",
+      "score": 6257,
+      "timestamp": "2025-10-29 12:22"
+    },
+    {
+      "name": "Chloe",
+      "score": 5826,
+      "timestamp": "2026-02-08 19:37"
+    },
+    {
+      "name": "Ravi",
+      "score": 5511,
+      "timestamp": "2025-07-21 08:53"
+    },
+    {
+      "name": "Zara",
+      "score": 5077,
+      "timestamp": "2026-02-22 10:12"
+    }
+  ],
+  "score": [
+    {
+      "name": "Оля",
+      "score": 7824,
+      "timestamp": "2026-03-18 01:08"
+    },
+    {
+      "name": "Elena",
+      "score": 7814,
+      "timestamp": "2025-11-10 18:05"
+    },
+    {
+      "name": "Ken",
+      "score": 7516,
+      "timestamp": "2026-01-19 13:29"
+    },
+    {
+      "name": "Vera",
+      "score": 7248,
+      "timestamp": "2025-09-22 21:14"
+    },
+    {
+      "name": "Mateo",
+      "score": 6766,
+      "timestamp": "2025-12-03 11:48"
+    },
+    {
+      "name": "Luna",
+      "score": 6536,
+      "timestamp": "2026-02-01 15:36"
+    },
+    {
+      "name": "Artem",
+      "score": 6262,
+      "timestamp": "2025-08-30 09:57"
+    },
+    {
+      "name": "Nora",
+      "score": 5914,
+      "timestamp": "2026-02-26 20:21"
+    },
+    {
+      "name": "Hugo",
+      "score": 5560,
+      "timestamp": "2025-07-09 07:42"
+    },
+    {
+      "name": "Yuna",
+      "score": 5215,
+      "timestamp": "2025-10-12 16:18"
+    }
+  ]
+}

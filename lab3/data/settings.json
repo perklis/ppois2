@@ -1,0 +1,62 @@
+{
+  "screen": {
+    "width": 960,
+    "height": 720,
+    "title": "Jewel Quest"
+  },
+  "fps": 60,
+  "board": {
+    "rows": 8,
+    "cols": 8,
+    "tile_size": 64,
+    "origin": [96, 120]
+  },
+  "colors": [
+    [214, 80, 80],
+    [80, 160, 220],
+    [230, 190, 60],
+    [100, 200, 120]
+  ],
+  "fonts": {
+    "title": "palatino linotype",
+    "ui": "palatino linotype"
+  },
+  "time_mode": {
+    "time_limit": 120,
+    "jewel_types": 4
+  },
+  "score": {
+    "base": 10,
+    "cascade_multiplier": 0.3,
+    "special_bonus": 40
+  },
+  "animation": {
+    "swap_time": 0.15,
+    "remove_time": 0.18,
+    "fall_time": 0.18
+  },
+  "audio": {
+    "music_volume": 0.35,
+    "sfx_volume": 0.6
+  },
+  "assets": {
+    "music": "assets/music/bg.wav",
+    "sfx": {
+      "match": "assets/sounds/match.wav",
+      "special": "assets/sounds/special.wav",
+      "invalid": "assets/sounds/invalid.wav"
+    }
+  },
+  "background_images": {
+    "menu": "fon/back_menu.png",
+    "time": "fon/back_time.png",
+    "score": "fon/back.png",
+    "scores": "fon/back_score.png",
+    "help": "fon/back_what.png"
+  },
+  "background": {
+    "top": [10, 14, 26],
+    "bottom": [22, 30, 48],
+    "stars": 90
+  }
+}
