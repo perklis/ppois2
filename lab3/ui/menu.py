@@ -1,11 +1,9 @@
 import pygame
 
-
 class Menu:
-    """Simple vertical menu with keyboard and mouse support."""
-
+    
     def __init__(self, items, font, small_font=None, title=None):
-        self.items = items  # list of (label, action)
+        self.items = items
         self.font = font
         self.small_font = small_font or font
         self.title = title
@@ -41,8 +39,6 @@ class Menu:
 
     def draw(self, surface, screen_w, screen_h):
         self.screen_width = screen_w
-        # no dim overlay on background
-        # title disabled per request
 
         self.item_rects = []
         start_y = int(screen_h * 0.55)

@@ -1,9 +1,7 @@
 import pygame
 
-
 class HelpScreen:
-    """Displays game rules and controls."""
-
+    
     def __init__(self, font, small_font):
         self.font = font
         self.small_font = small_font

@@ -1,4 +1,3 @@
-
 import os
 from datetime import datetime
 from pathlib import Path
@@ -9,7 +8,6 @@ from score import HighScoreTable
 from game.board import Board
 from ui.menu import Menu
 from ui.help_screen import HelpScreen
-
 
 class AudioManager:
     def __init__(self, settings, base_dir):
@@ -42,7 +40,6 @@ class AudioManager:
                 self.sfx[name] = tone(520 + 40 * len(self.sfx))
             self.sfx[name].set_volume(self.settings["audio"]["sfx_volume"])
 
-        # simple looping tone for music fallback
         self.music_sound = tone(220, duration=0.5, volume=0.2)
         self.music_sound.set_volume(self.settings["audio"]["music_volume"])
 
@@ -67,7 +64,6 @@ class AudioManager:
         pygame.mixer.music.stop()
         if self.music_sound:
             self.music_sound.stop()
-
 
 class Game:
     def __init__(self, screen, base_dir):
@@ -318,7 +314,6 @@ class Game:
                     ):
                         self.level_complete_timer = 1.5
                         self.state = "level_complete"
-                # if surpassed top record, prompt immediately
                 if self.state == "playing":
                     table = self.highscores_score
                     if table.is_new_record(self.total_score):

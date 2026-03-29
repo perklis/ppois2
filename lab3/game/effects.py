@@ -3,9 +3,8 @@ SPECIAL_LINE_H = "line_h"
 SPECIAL_LINE_V = "line_v"
 SPECIAL_COLOR = "color"
 
-
 def special_positions(special_type, pos, rows, cols, target_color=None, grid=None):
-    """Return positions affected by a special jewel activation."""
+    
     r, c = pos
     affected = set()
 

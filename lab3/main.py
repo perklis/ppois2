@@ -2,7 +2,6 @@ import pygame
 
 from game.game import Game
 
-
 def main():
     pygame.mixer.pre_init(44100, -16, 1, 512)
     pygame.init()
@@ -21,7 +20,6 @@ def main():
 
     game = Game(screen, base_dir)
     game.run()
-
 
 if __name__ == "__main__":
     main()

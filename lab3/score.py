@@ -2,7 +2,6 @@ from pathlib import Path
 
 from config_loader import load_json, save_json
 
-
 class HighScoreTable:
     def __init__(self, path, mode, limit=10):
         self.path = Path(path)

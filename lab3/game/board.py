@@ -12,10 +12,7 @@ from game.effects import (
     special_positions,
 )
 
-
 class Board:
-    """Match-3 board with swap/match/fall animations."""
-
     def __init__(self, settings, level_conf):
         self.settings = settings
         self.rows = settings["board"]["rows"]
@@ -83,13 +80,11 @@ class Board:
         return self.rng.randrange(self.jewel_type_count)
 
     def _creates_match(self, row, col, color_id):
-        # Check horizontal
         if col >= 2:
             left1 = self.grid[row][col - 1]
             left2 = self.grid[row][col - 2]
             if left1 and left2 and left1.color_id == color_id and left2.color_id == color_id:
                 return True
-        # Check vertical
         if row >= 2:
             up1 = self.grid[row - 1][col]
             up2 = self.grid[row - 2][col]
@@ -172,7 +167,6 @@ class Board:
         jewel_b = self.grid[pos_b[0]][pos_b[1]]
         if jewel_a is None or jewel_b is None:
             return
-        # Swap in grid first
         self._swap_grid(pos_a, pos_b)
         self.swap_positions = (pos_a, pos_b)
         self.cascade_step = 0
@@ -204,7 +198,6 @@ class Board:
         if self.state == "swapping":
             matches = self.find_matches()
             if not matches:
-                # Check for color special activation
                 pos_a, pos_b = self.swap_positions
                 jewel_a = self.grid[pos_a[0]][pos_a[1]]
                 jewel_b = self.grid[pos_b[0]][pos_b[1]]
@@ -214,7 +207,6 @@ class Board:
                 if jewel_b and jewel_b.special == SPECIAL_COLOR:
                     self._activate_color_swap(pos_b, jewel_a.color_id)
                     return
-                # revert swap
                 self._swap_grid(pos_a, pos_b)
                 self.state = "reverting"
                 self.events.append({"type": "swap_invalid"})
@@ -293,7 +285,6 @@ class Board:
             for pos in match["positions"]:
                 counts[pos] = counts.get(pos, 0) + 1
 
-        # T/L intersection -> bomb
         for pos, count in counts.items():
             if count >= 2:
                 specials_to_create[pos] = SPECIAL_BOMB
@@ -312,10 +303,8 @@ class Board:
                     )
             removal.update(positions)
 
-        # Keep specials that will be created
         removal -= set(specials_to_create.keys())
 
-        # Expand removals by activated specials
         expanded = set(removal)
         for pos in list(removal):
             jewel = self.grid[pos[0]][pos[1]]
@@ -344,7 +333,6 @@ class Board:
                     continue
                 if jewel.special != SPECIAL_BOMB or jewel.color_id != yellow_id:
                     continue
-                # look for vertical neighbor bomb in same match
                 for other in positions:
                     if other[1] == pos[1] and abs(other[0] - pos[0]) == 1:
                         other_jewel = self.grid[other[0]][other[1]]
@@ -437,7 +425,6 @@ class Board:
 
     def find_matches(self):
         matches = []
-        # horizontal
         for r in range(self.rows):
             run = [0]
             for c in range(1, self.cols):
@@ -452,7 +439,6 @@ class Board:
                 positions = {(r, cc) for cc in run}
                 matches.append({"positions": positions, "orientation": "h"})
 
-        # vertical
         for c in range(self.cols):
             run = [0]
             for r in range(1, self.rows):
@@ -484,7 +470,6 @@ class Board:
         board_surf.fill((255, 255, 255, 120))
         surface.blit(board_surf, board_rect.topleft)
 
-        # grid
         for r in range(self.rows):
             for c in range(self.cols):
                 cell_rect = pygame.Rect(

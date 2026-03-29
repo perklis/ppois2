@@ -1,6 +1,5 @@
 import pygame
 
-
 class Animation:
     def __init__(self, duration, on_complete=None):
         self.duration = max(duration, 0.001)
@@ -9,7 +8,7 @@ class Animation:
 
     def update(self, dt):
         self.elapsed += dt
-        t = min(self.elapsed / self.duration, 1.0)
+        t = min((self.elapsed / self.duration)**2, 1.0)
         self.apply(t)
         done = self.elapsed >= self.duration
         if done and self.on_complete:
@@ -18,7 +17,6 @@ class Animation:
 
     def apply(self, t):
         raise NotImplementedError
-
 
 class MoveAnimation(Animation):
     def __init__(self, jewel, start_pos, end_pos, duration, on_complete=None):
@@ -32,7 +30,6 @@ class MoveAnimation(Animation):
         y = self.start_pos[1] + (self.end_pos[1] - self.start_pos[1]) * t
         self.jewel.set_pixel_pos(x, y)
 
-
 class ScaleAnimation(Animation):
     def __init__(self, jewel, start_scale, end_scale, duration, on_complete=None):
         super().__init__(duration, on_complete)
@@ -42,7 +39,6 @@ class ScaleAnimation(Animation):
 
     def apply(self, t):
         self.jewel.scale = self.start_scale + (self.end_scale - self.start_scale) * t
-
 
 class AnimationManager:
     def __init__(self):
@@ -64,10 +60,8 @@ class AnimationManager:
     def clear(self):
         self.animations = []
 
-
 class ExplosionEffect:
-    """Simple radial explosion effect."""
-
+    
     def __init__(self, center, duration=0.35, max_radius=42):
         self.center = center
         self.duration = max(duration, 0.05)
@@ -79,7 +73,7 @@ class ExplosionEffect:
         return self.elapsed >= self.duration
 
     def draw(self, surface):
-        t = min(self.elapsed / self.duration, 1.0)
+        t = min((self.elapsed / self.duration)**2, 1.0)
         radius = int(self.max_radius * (0.4 + 0.6 * t))
         alpha = int(200 * (1.0 - t))
         if alpha <= 0 or radius <= 0:

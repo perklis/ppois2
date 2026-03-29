@@ -1,15 +1,13 @@
 import pygame
 
-
 class Jewel:
-    """Single jewel on the board."""
-
+    
     def __init__(self, color_id, row, col, tile_size, special=None):
         self.color_id = color_id
         self.row = row
         self.col = col
         self.tile_size = tile_size
-        self.special = special  # None, "bomb", "line_h", "line_v", "color"
+        self.special = special
         self.scale = 1.0
         self.x = 0
         self.y = 0
@@ -24,7 +22,6 @@ class Jewel:
         rect.center = (int(self.x), int(self.y))
         base_color = colors[self.color_id]
         pygame.draw.rect(surface, base_color, rect, border_radius=max(4, size // 6))
-        # subtle highlight
         highlight = (min(base_color[0] + 40, 255), min(base_color[1] + 40, 255), min(base_color[2] + 40, 255))
         pygame.draw.rect(surface, highlight, rect.inflate(-size // 3, -size // 3), border_radius=max(4, size // 6))
 
