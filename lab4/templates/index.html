@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AroundMinsk</title>
+  <link rel="stylesheet" href="/static/styles.css?v=4" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>AroundMinsk</h1>
+    <p>ваш гид по достопримечательностям Минска</p>
+  </header>
+  <main class="dashboard">
+    <section class="card card-map">
+      <h2>Карта достопримечательностей</h2>
+      {% if message %}<div class="message success">{{ message }}</div>{% endif %}
+      {% if error %}<div class="message error">{{ error }}</div>{% endif %}
+      {% if selected_attraction %}
+        <div class="message info">Выбрана достопримечательность: {{ selected_attraction }}</div>
+      {% endif %}
+      {% if attraction_info %}<pre class="info">{{ attraction_info }}</pre>{% endif %}
+      {% if photos %}
+        <div class="photos info-block">
+          <div class="photo-grid">
+            {% for p in photos %}
+              <div class="photo-card">
+                <img src="{{ p.href }}" alt="{{ p.title }}" />
+                <div>{{ p.title }}</div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      {% if reviews %}
+        <div class="info-block">
+          {% for r in reviews %}
+            <div><strong>{{ r.created_at }}</strong> — {{ r.author }}, {{ r.rating }}/5<br />{{ r.text }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+      <pre>{{ map_text }}</pre>
+    </section>
+
+    <section class="card card-lookup">
+      <h2>Найти информацию по карте</h2>
+      <form action="/select" method="post">
+        <input name="cell_id" placeholder="Клетка, например A1" required />
+        <button type="submit">Выбрать достопримечательность</button>
+      </form>
+      <form action="/attraction" method="post">
+        <input name="attraction_id" placeholder="ID достопримечательности" required />
+        <button type="submit">Показать информацию</button>
+      </form>
+      <form action="/photos-list" method="post">
+        <input name="attraction_id" placeholder="ID достопримечательности" required />
+        <button type="submit">Показать фото</button>
+      </form>
+    </section>
+
+    <section class="card card-reviews">
+      <h2>Отзывы</h2>
+      <form action="/review" method="post">
+        <input name="attraction_id" placeholder="ID достопримечательности" required />
+        <input name="author" placeholder="Автор" required />
+        <input type="number" name="rating" min="1" max="5" placeholder="Оценка 1-5" required />
+        <textarea name="text" placeholder="Текст отзыва" required></textarea>
+        <button type="submit">Опубликовать отзыв</button>
+      </form>
+      <form action="/reviews" method="post">
+        <input name="attraction_id" placeholder="ID достопримечательности" required />
+        <button type="submit">Показать отзывы</button>
+      </form>
+    </section>
+
+    <section class="card card-route-create">
+      <h2>Создание и наполнение маршрута</h2>
+      <form action="/route/create" method="post">
+        <input name="name" placeholder="Название маршрута" required />
+        <button type="submit">Создать маршрут</button>
+      </form>
+      <form action="/route/add" method="post">
+        <input name="route_id" placeholder="ID маршрута" required />
+        <input name="attraction_id" placeholder="ID достопримечательности" required />
+        <button type="submit">Добавить точку</button>
+      </form>
+    </section>
+
+    <section class="card card-route-manage">
+      <h2>Управление готовым маршрутом</h2>
+      <form action="/route/remove" method="post">
+        <input name="route_id" placeholder="ID маршрута" required />
+        <input name="attraction_id" placeholder="ID достопримечательности" required />
+        <button type="submit">Удалить точку</button>
+      </form>
+      <form action="/route/publish" method="post">
+        <input name="route_id" placeholder="ID маршрута" required />
+        <button type="submit">Опубликовать</button>
+      </form>
+      <form action="/route/unpublish" method="post">
+        <input name="route_id" placeholder="ID маршрута" required />
+        <button type="submit">Снять с публикации</button>
+      </form>
+      <form action="/route/archive" method="post">
+        <input name="route_id" placeholder="ID маршрута" required />
+        <button type="submit">Архивировать</button>
+      </form>
+    </section>
+
+    <section class="card card-attractions">
+      <h2>Список достопримечательностей</h2>
+      <table>
+        <thead><tr><th>ID</th><th>Название</th><th>Клетка</th><th>Теги</th><th>Фото</th></tr></thead>
+        <tbody>
+          {% for a in attractions %}
+            <tr>
+              <td>{{ a.id.value }}</td>
+              <td>{{ a.name }}</td>
+              <td>{{ a.cell_id }}</td>
+              <td>{{ a.tags | join(', ') if a.tags else 'нет' }}</td>
+              <td>{{ a.photo_ids | length }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card card-routes">
+      <h2>Список маршрутов</h2>
+      <table>
+        <thead><tr><th>ID</th><th>Название</th><th>Статус</th><th>Точек</th></tr></thead>
+        <tbody>
+          {% for r in routes %}
+            <tr>
+              <td>{{ r.id.value }}</td>
+              <td class="route-cell">
+                {{ r.name }}
+                <div class="route-stops-popover">
+                  {% if route_stops[r.id.value] %}
+                    {% for stop in route_stops[r.id.value] %}
+                      <div>{{ stop.id }} - {{ stop.name }}</div>
+                    {% endfor %}
+                  {% else %}
+                    <div>Точек пока нет</div>
+                  {% endif %}
+                </div>
+              </td>
+              <td>{{ r.status.value }}</td>
+              <td>{{ r.attraction_ids | length }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card card-route-view">
+      <h2>Просмотр маршрута</h2>
+      <form action="/route/stops" method="post">
+        <select name="route_id" required>
+          <option value="" disabled {% if not selected_route_id %}selected{% endif %}>Выберите маршрут</option>
+          {% for r in routes %}
+            <option value="{{ r.id.value }}" {% if selected_route_id == r.id.value %}selected{% endif %}>
+              {{ r.id.value }} - {{ r.name }}
+            </option>
+          {% endfor %}
+        </select>
+        <button type="submit">Показать достопримечательности маршрута</button>
+      </form>
+      {% if selected_route_name is defined %}
+        <div class="route-stops-view info-block">
+          <div class="message info">Маршрут: {{ selected_route_name }} ({{ selected_route_id }})</div>
+          {% if selected_route_stops %}
+            <ul class="route-stop-list">
+              {% for stop in selected_route_stops %}
+                <li>{{ stop.id }} - {{ stop.name }}</li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <div class="message info">В маршруте пока нет достопримечательностей</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </section>
+  </main>
+</body>
+</html>
